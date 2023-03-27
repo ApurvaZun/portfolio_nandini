@@ -1,0 +1,66 @@
+.App{
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.App-header{
+  position: sticky;
+  top:0;
+  background: white;
+}
+
+.App-header h1{
+  font-size: 35px;
+}
+
+nav{
+  min-height: 20vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+nav h1,
+nav ul{
+  flex:1;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+section{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  
+}
+
+.work{
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-auto-rows: min-content;
+}
+
+.img__sub{
+  object-fit: cover;
+  width: 640px;
+  height: 450px;
+  border-radius: 5px;
+  min-height: 170px;
+}

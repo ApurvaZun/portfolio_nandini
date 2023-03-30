@@ -1,6 +1,9 @@
 import "./App.css";
 import Header from "./components/Header";
-import subsectionImg from "./portfolio-img.jpeg";
+import portfolio_img from "./portfolio-img.jpeg";
+import novel_img from "./novel-final.jpg";
+
+const portfolio_grid_images=[novel_img,novel_img,novel_img,portfolio_img];
 
 function App() {
   return (
@@ -8,18 +11,13 @@ function App() {
       <Header />
       <section className="container">
         <div className="work">
-          <div className="work__subsection">
-            <img className="img__sub" src={subsectionImg} alt="work section" />
-          </div>
-          <div className="work__subsection">
-            <img className="img__sub" src={subsectionImg} alt="work section" />
-          </div>
-          <div className="work__subsection">
-            <img className="img__sub" src={subsectionImg} alt="work section" />
-          </div>
-          <div className="work__subsection">
-            <img className="img__sub" src={subsectionImg} alt="work section" />
-          </div>
+          {portfolio_grid_images.map(image => {
+            return (
+              <div className="grid_item" key={image}>
+                <img className="img__sub" src={image} alt="work section" />
+              </div>
+            )
+          })}
         </div>
       </section>
     </div>
@@ -27,3 +25,4 @@ function App() {
 }
 
 export default App;
+        
